@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lobster', cursive;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../font/Makinas-Scrap-5.otf);
+}
+
+li {
+    font-family: myFirstFont;
+    font-size: 30px;
+}
+
+.homelogo {
+    display: flex;
+    justify-content: center;
+}
+
+#homeimg {
+    width: 40vw;
+    height: 30vh;
+}
+
+.navbar {
+    background-color: white;
+    margin-bottom: 6px;
+}
+
+.navbar-brand {
+    font-size: 36px;
+}
+
+.navbar-nav a {
+    font-size: 20px;
+}
+
+.imgbar {
+    margin-bottom: 20px;
+}
+
+.nam01 {
+    font-family: myFirstFont;
+    color: black;
+}
+
+.vbar {
+    padding-left: 0px;
+}
+
+.infobar {
+    padding-left: 2px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.footerbar {
+    background-color: #bcb9c6;
+}
+
+hr {
+    border-top: 0;
+}
+
+.footer ul {
+    margin: 10px 20px 50px 0px;
+}
+
+.fbcard {
+    border: 1px solid black;
+    transition: all 0.2s ease-in;
+}
+
+.fbcard:hover {
+    box-shadow: 5px 5px 20px 5px silver;
+}
+
+.myBtn {
+    display: none;
+    position: fixed;
+    bottom: 180px;
+    right: 10px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #34b3a0;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#test {
+    font-size: 40px;
+    width: 40px;
+    top: 38px;
+    color: white;
+    border: 3px solid #bcb9c6;
+    border-radius: 50%;
+    background: #bcb9c6;
+    transition: background 0.5s, width 0.5s, height 0.5s;
+    float: left;
+    /*margin: 5px;*/
+    /*margin-left: 25px;*/
+    padding: 0;
+}
+
+#test:hover {
+    color: white;
+    border: 3px solid black;
+    border-radius: 50%;
+    background: blue;
+}
+
+#test1 {
+    font-size: 40px;
+    width: 40px;
+    color: white;
+    border: 3px solid #bcb9c6;
+    border-radius: 50%;
+    background: #bcb9c6;
+    transition: background 0.5s, width 0.5s, height 0.5s;
+    float: left;
+    /*margin: 5px;*/
+    /*margin-left: 25px;*/
+}
+
+#test1:hover {
+    color: white;
+    border: 3px solid black;
+    border-radius: 50%;
+    background: chocolate;
+}
+
+#foo {
+    -skrollr-animation-name: animation1;
+}
+
+@-skrollr-keyframes animation1 {
+    500 {
+        opacity: 1;
+    }
+    800 {
+        opacity: 0;
+    }
+}

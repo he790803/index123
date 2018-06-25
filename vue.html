@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet/vue.css">
+</head>
+
+<body>
+
+    <div class="todo container my-3">
+        <div class="todobar col-sm-3 my-1">
+            <label class="sr-only" for="inlineFormInputGroupUsername">Username</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">待辦事項</div>
+                </div>
+                <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="準備要做的事" v-model="newTodo" @keyup.enter="addTodo">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button" @click="addTodo">新增</button>
+                </div>
+            </div>
+        </div>
+        <div class="card text-center">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" :class="{'active':visibility=='all'}" @click="visibility='all'" href="#">全部</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " :class="{'active':visibility=='active'}" @click="visibility='active'" href="#">進行中</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" :class="{'active':visibility=='completed'}" @click="visibility='completed'" href="#">已完成</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="list-group list-group-flush text-left">
+                <li class="list-group-item" v-for="(item,key) in filterTodos" @dblclick="editTodo(item)">
+                    <div class="d-flex" v-if="item.id !==cacheTodo.id">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" v-model="item.completed" :id="item.id">
+                            <label class="form-check-label" :class="{completed:item.completed}" for="item.id">
+                              {{item.title}}
+                            </label>
+                        </div>
+                        <button type="button" class="close ml-auto" aria-label="Close" @click="removeTodo(key)">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+
+                    </div>
+                    <input type="text" class="form-control" v-if="item.id ===cacheTodo.id" v-model="cacheTitle" @keyup.esc="canceledit()" @keyup.enter="doneedit(item)">
+                </li>
+
+                <!-- <li class="list-group-item">
+                    <div class="d-flex">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="a1">
+                            <label class="form-check-label completed" for="a1">
+                              Cras justo odio
+                            </label>
+                        </div>
+                        <button type="button" class="close ml-auto" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                    </div>
+                </li>-->
+
+            </ul>
+
+            <div class="card-footer d-flex justify-content-between">
+                <span>有{{todoCompleted}}筆完成，還有{{ notCompleted }} 筆任務未完成</span>
+                <a href="#" @click="removeall()">清除所有任務</a>
+            </div>
+        </div>
+    </div>
+    <!--<div id="app">
+        <button v-bind:class="{ active: myCheck }">  {{ message }}</button> <br>
+        <button type="button" onclick="alert('點')" v-bind:class="{ aaa: myCheck }">2222</button>
+        <h1 v-bind:class="{ active: myCheck }"> {{ score }}</h1>
+        <div v-if=" loading ">訊息載入正確</div>
+        <input type="text " v-model="score " v-bind:class="{ active: myCheck }">
+        <div v-if="score>=60" v-bind:class="{ active: myCheck }">GOOD</div>
+        <div v-else>BAD</div>
+        <ul>
+            <li v-for="color in colors" @click="mymom(color)">{{color}}</li>
+            <li v-for="par in home" @click="myfa(par.father)">{{par.father}}</li>
+        </ul>
+        <input type="text" placeholder="請輸入代辦事項" v-on:keyup.enter="addTodo(newTodo)" v-model="newTodo">
+        <ul>
+            <li v-for="todo in todos">
+                {{todo.content}} - <a href="#" @click.prevent="removeTodo(todo)">刪除</a>
+                //prevent終止連結
+            </li>
+        </ul>
+        輸入台幣:<input type="text" v-model="ntmoney">
+        <ul>
+            <li>日幣:{{japan}}</li>
+            <li>美金:{{usa}}</li>
+        </ul>
+    </div>-->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
