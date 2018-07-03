@@ -1,0 +1,92 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.homebar {
+    width: 100%;
+    height: 30%;
+    background-color: #EF959D;
+}
+
+.homebar p {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 20%;
+    padding-top: 7%;
+    display: inline-block;
+}
+
+.searchicon {
+    display: inline-block;
+    width: 90%;
+    margin-top: 5%;
+    border-bottom: 3px solid #fff;
+}
+
+input {
+    border-width: 0;
+    background-color: #EF959D;
+    font-size: 30px;
+    outline: none;
+}
+
+.content {
+    background-color: #11BFFF;
+    width: 100%;
+    height: auto;
+    background-attachment: fixed;
+}
+
+.container.infobar {
+    width: 20%;
+    height: 30%;
+    background-color: #CEC2FF;
+    margin-left: 10%;
+}
+
+.content p {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 2%;
+}
+
+#location {
+    width: 20%;
+}
+
+#map-canvas {
+    height: 300px;
+    width: 500px;
+    margin: 2%;
+    padding: 0;
+}
+
+.col {
+    background: rgba(11, 11, 11, 0.5);
+    width: 300px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s ease-in;
+}
+
+h5,
+h6 {
+    font-weight: bold;
+}
+
+.airccc {
+    background-color: #00A676;
+}
+
+.airccc.normal {
+    background-color: #D77A61;
+}
