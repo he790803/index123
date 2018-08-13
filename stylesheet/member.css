@@ -1,0 +1,10 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #D6E3F8;
+}
+
+.logoutText {
+    font-size: 20px;
+}
