@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: myFirstFont;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../font/Makinas-Scrap-5.otf);
+}
+
+.aa #homeimg {
+    width: 200px;
+    height: 200px;
+    float: left;
+    transition: 0.5s;
+}
+
+.aa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 100px;
+    z-index: 10;
+    margin-top: 0;
+    min-width: 100%;
+    opacity: 0.94;
+    transition: opacity 0.5s ease-out;
+}
+
+.aa.navbar.navbar-expand-lg.navbar-light.black {
+    background: rgba(105, 105, 105, 0.8);
+    height: 80px;
+    padding: 10px 50px;
+}
+
+#homeimg.black {
+    width: 80px;
+    height: 80px;
+    margin-right: 5%;
+}
+
+.aa a {
+    font-size: 35px;
+}
+
+.aa ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-left: auto;
+}
+
+.aa ul li {
+    list-style: none;
+}
+
+.aa ul li a {
+    list-style: 80px;
+    color: #262626;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.aa.black .navbar-brand,
+.aa.black ul li a,
+.aa.black a {
+    color: #fff;
+}
+
+.aa a:hover,
+nav ul li a:active,
+nav ul li a:hover {
+    color: #fff;
+    background: #f00;
+    text-decoration: none;
+}
+
+.collapse {
+    margin-right: 5%;
+}
+
+.jumbotron {
+    background: linear-gradient(to left, #b2fefa, #0ed2f7);
+    width: 100vw;
+    height: 60vh;
+    margin-top: 20%;
+}
+
+.jumbotron .btn {
+    color: white;
+    font-weight: bold;
+    border: white 2px solid;
+}
+
+.collapse a {
+    font-size: 30px;
+}
+
+.about h2,
+.skils h2 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.container div {
+    text-align: left;
+    font-size: 20px;
+}
+
+.container img {
+    display: block;
+    margin-bottom: 10%;
+}
+
+#myPhoto {
+    border-radius: 15%;
+}
+
+.skilsWords p {
+    text-align: left;
+    font-size: 40px;
+}
+
+.skilsWords .languages {
+    font-size: 20px;
+}
+
+.fab.fa-facebook-square {
+    color: #3b5998;
+    font-size: 45px;
+    margin-right: 2%;
+}
+
+.fab.fa-instagram {
+    color: black;
+    font-size: 45px;
+    margin-left: 2%;
+}
+
+.fab.fa-github {
+    color: black;
+    font-size: 42px;
+    margin-left: 3%;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer p {
+    text-align: center;
+}
