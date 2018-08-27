@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>PORTFOLIO</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(window).on('scroll', function () {
+            if ($(window).scrollTop()) {
+                $('.aa').addClass('black');
+                $('#homeimg').addClass('black');
+            } else {
+                $('.aa').removeClass('black');
+                $('#homeimg').removeClass('black');
+            }
+        })
+    </script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet/newIndex.css">
+    <link rel="stylesheet" href="stylesheet/protfolio.css">
+</head>
+
+<body>
+
+    <nav class="aa navbar navbar-expand-lg navbar-light">
+        <img id="homeimg" src="src/My.png" class="d-inline-block align-top" alt="">
+        <a class="navbar-brand" href="newIndex.html">Yong-Han's Page</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul>
+                <li><a href="newIndex.html">首頁</a></li>
+                <li><a href="protfolio.html">作品</a> </li>
+                <li><a href="#">聯絡我</a> </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="mainPro">
+        <div class="jumbotron">
+            <h1 class="protfolio">PORTFOLIO</h1>
+        </div>
+        <div class="container">
+            <div class="skillsTitle">
+                <h1>Front end</h1>
+            </div>
+            <div class="myPortfolio">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="src/web01.jpg" alt="">
+                    </div>
+                    <div class="col-md-6">
+                        <p>cowboy網站試作</p>
+                        <hr>
+                        <h1>這是以表哥的手工機車改造工坊作為主題，設計一簡單RWD範例網站。</h1><br>
+                        <h1>使用技術:html,css,Javascript,Bootstrap。</h1>
+                        <a href="cowboy.html"><button type="button" class="btn btn-outline-secondary">Link</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="myPortfolio">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="src/web02.jpg" alt="">
+                    </div>
+                    <div class="col-md-6">
+                        <p>Twitch API串接</p>
+                        <hr>
+                        <h1>此範例是在PTT Soft_Job版的Huli提供的免費教學，此範例主要是讓我學習基本的Css效果以及API串接。</h1><br>
+                        <h1>使用技術:html,css,Javascript。</h1>
+                        <a href="twitch.html"><button type="button" class="btn btn-outline-secondary">Link</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="myPortfolio">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="src/web03.jpg" alt="">
+                    </div>
+                    <div class="col-md-6">
+                        <p>Vue.js任務清單</p>
+                        <hr>
+                        <h1>此範例使用Vue.js的基本模板，讓我能了解Vue的基本使用(如:class,@click,v-for...等等)。</h1><br>
+                        <h1>使用技術:html,Vue.js,Bootstrap。</h1>
+                        <a href="vue.html"><button type="button" class="btn btn-outline-secondary">Link</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="myPortfolio">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="src/web04.jpg" alt="">
+                    </div>
+                    <div class="col-md-6">
+                        <p>統一獅 & 富邦分割主題範例網站</p>
+                        <hr>
+                        <h1>以中華職棒為主題設計一滑動分割效果之網站。</h1><br>
+                        <h1>使用技術:html,css,skrolr,Javascript,Vue.js。</h1>
+                        <a href="fat.html"><button type="button" class="btn btn-outline-secondary">Link</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="skillsTitle">
+                <h1>Back end</h1>
+            </div>
+            <div class="myPortfolio">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="src/web05.jpg" alt="">
+                    </div>
+                    <div class="col-md-6">
+                        <p>會員登入範例網站</p>
+                        <hr>
+                        <h1>這是以PHP及MySQL做一簡單的會員登入網站，藉此學習基本的技術。</h1><br>
+                        <h1>使用技術:php,MySQl,html,css,jQuery。</h1>
+                        <a href="cowboy.html"><button type="button" class="btn btn-outline-secondary">Link</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="footer">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <a href="https://www.facebook.com/101m02006" target="_blank" class="callmeicon">
+                    <i class="fab fa-facebook-square"></i>
+
+                </a>
+                <a href="https://www.instagram.com/omg___omg_0803/" target="_blank" class="callmeicon">
+                    <i class="fab fa-instagram"></i>
+
+                </a>
+                <p>Copyright © 2018 Yong Han Chi</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
